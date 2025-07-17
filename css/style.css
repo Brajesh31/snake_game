@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background-image: url('../logo.jpg');
+    max-height: 100vh;
+    background-size: 100vw 50vw;
+    background-repeat: no-repeat;
+    padding: 23px;
+    display: flex;
+    justify-content: center; 	
+    align-items: center;
+    opacity: 0.9;
+}
+
+#board{
+    background: linear-gradient(rgb(187, 255, 187) , rgb(79, 239, 183));
+    height: 92vmin;
+    width: 90vmin;
+    border: solid 5px black;
+    display: grid;
+    grid-template-rows: repeat(18 ,1fr);
+    grid-template-columns: repeat(18, 1fr) ;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 99px;
+    right: 100px;
+    font-size: 59px;
+    font-weight: bold;
+    font-family: "Bungee Spice", sans-serif;
+}
+#highScoreBox{
+    position: absolute;
+    top: 39px;
+    right: 50px;
+    font-size: 49px;
+    font-weight: bold;
+    font-family: "Bungee Spice", sans-serif;
+}
+
+
+
+.head {
+    /* width: 100px;
+    height: 100px; */
+    background: linear-gradient(red, yellow);
+    border: 2px solid purple;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* Adjusted border-radius values */
+    position: relative;
+    transform: rotate(45deg); /* Rotating the shape */
+}
+
+.head::before,
+.head::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.head::before {
+    top: 1%;
+    left: 39%;
+    width: 8px;
+    height: 8px;
+}
+
+.head::after {
+    top: 45%;
+    right: 75%;
+    width: 8px;
+    height: 8px;
+}
+
+
+/* .snake{
+    background-color: darkblue;
+    border: .25vmin solid white;
+    border-radius: 14px;
+} */
+.snake{
+    /* width: 100px;
+    height: 100px;   */
+    background: linear-gradient(rgb(157, 0, 255), rgb(0, 255, 251));
+    border: 2px solid purple;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    transform: rotate(45deg);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.8);
+    }
+}
+
+
+/* .food{
+    background: linear-gradient(rgb(188, 246, 16),rgb(169, 249, 169));
+    border: .25vmin solid black;
+    border-radius: 50%;
+
+}        */
+
+
+.food {
+    /* width: 80px;
+    height: 80px;  */
+    background: linear-gradient(rgb(236, 48, 15), rgb(5, 30, 96));
+    border: 0.25vmin solid rgba(0, 0, 0, 0.2); /* Adjust border color and width */
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), /* Inner shadow for depth */
+                0 2px 6px rgba(0, 0, 0, 0.3); /* Outer shadow for depth */
+    position: relative;
+}
+
+.food::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 30%;
+    height: 30%;
+    background: rgba(255, 255, 255, 0.5); /* Highlight color */
+    border-radius: 50%;
+}
